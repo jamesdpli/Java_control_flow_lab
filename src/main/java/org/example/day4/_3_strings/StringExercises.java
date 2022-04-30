@@ -25,14 +25,11 @@ public class StringExercises {
        doubleFirstHalf("panda")    -> "panda"
     */
     String doubleFirstHalf(String str) {
-        if (str.length() % 2 == 0) {
-            int halfStrLength = str.length() / 2;
-            String[] strArray = {str};
-            System.out.println(strArray[0]);
-
-            return str;
+        if (str.length()%2 == 0) {
+            String half = str.substring(0, str.length() / 2);
+            return half + half;
         }
-        return "";
+        return str;
     }
 
     /*
@@ -83,7 +80,10 @@ public class StringExercises {
        copyLastChars("Amazing")  -> "ing ing"
      */
     String copyLastChars(String str) {
-
-        return "";
+        if (str.length() < 3) {
+            return str + " " + str;
+        }
+        String end = str.substring(str.length()-3);
+        return end + " " + end;
     }
 }

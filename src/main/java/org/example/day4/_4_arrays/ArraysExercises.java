@@ -12,7 +12,11 @@ public class ArraysExercises {
         firstLast0([])          -> false
      */
     boolean firstLast0(int[] array) {
-        if (array[0] == 0 || array[-1] == 0) {
+        if(array.length == 0){
+            return false;
+        } else if((array[array.length - 1]) == 0){
+            return true;
+        } else  if (array[0] == 0) {
             return true;
         } else {
             return false;
@@ -29,7 +33,7 @@ public class ArraysExercises {
         middleInts([7, 7, 7], [44, 17, 56]          -> [7, 17]
      */
     int[] middleInts(int[] a, int[] b) {
-        return new int[]{};
+        return new int[]{a[1],b[1]};
     }
 
 
@@ -43,7 +47,7 @@ public class ArraysExercises {
 
     String[] reverse(String[] baseArray) {
 
-        return new String[]{};
+        return new String[]{baseArray.};
     }
 
     /*
